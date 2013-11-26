@@ -1,0 +1,11 @@
+<% for (var i = 0; i < public.jobs._data.length; i++) { %>
+    <% var job = public.jobs._data[i] %>
+
+    <article class="job" role="article">
+        <p>
+            <b><%= job.position %></b> @ <a href="<%= job.company.url %>"><%= job.company.name %></a>
+            <br><small class="text-muted"><%= job.date.start %> – <%= job.date.end || 'Present' %></small>
+        </p>
+        <p><%= job.description %></p>
+    </article>
+<% } %>

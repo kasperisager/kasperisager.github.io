@@ -1,0 +1,37 @@
+//
+// Grid
+// -----------------------------------------------------------------------------
+// Simple and minimal 4-column responsive grid.
+
+.container {
+  max-width: @container;
+  padding: 0 (@grid-gutter-width / 2);
+  margin:  0 auto;
+}
+
+.row {
+  .clearfix;
+  margin-right: -(@grid-gutter-width / 2);
+  margin-left:  -(@grid-gutter-width / 2);
+}
+
+.column {
+  padding-right: (@grid-gutter-width / 2);
+  padding-left:  (@grid-gutter-width / 2);
+
+  // Center align a column
+  &.center {
+    margin-right: auto;
+    margin-left:  auto;
+  }
+}
+
+@media (min-width: @container) {
+  .column {
+    float: left;
+
+    &.one   { width: 100% * (1 / @grid-columns); }
+    &.two   { width: 100% * (2 / @grid-columns); }
+    &.three { width: 100% * (3 / @grid-columns); }
+  }
+}

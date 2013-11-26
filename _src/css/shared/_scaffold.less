@@ -1,0 +1,44 @@
+//
+// Scaffold
+// -----------------------------------------------------------------------------
+// Let's get the basics down, shall we?
+
+*,
+*:before,
+*:after {
+  .box-sizing(border-box);
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: @text-color;
+  text-shadow: 0 1px @body-bg;
+  background-color: @body-bg;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: @link-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+ul, ol {
+  &.inline {
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      display: inline;
+      margin: 0 .5em;
+    }
+  }
+}
