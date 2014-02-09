@@ -1,0 +1,9 @@
+{% for experience in site.data.experiences %}
+  <article class="job" role="article">
+    <p>
+      <b>{{ experience.position }}</b> @ <a href="{{ experience.company.url }}">{{ experience.company.name }}</a>
+      <br><small class="text-muted">{{ experience.date.start }} – {{ experience.date.end }}</small>
+    </p>
+    <p>{{ experience.description | markdownify }}</p>
+  </article>
+{% endfor %}

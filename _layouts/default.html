@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+
+    <!--[if lt IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="container">
+
+      <header role="banner">
+        <div class="row">
+
+          <div class="column three">
+            {% include avatar.html %}
+            <h1 class="text-center">Hi! My name is Kasper</h1>
+            <h2 class="text-center text-muted">...and I build awesome things for the web.</h2>
+            <ul class="inline text-center">
+              <li><a href="mailto:kasperisager@gmail.com"><b>Email</b></a></li>
+              <li><a href="https://twitter.com/kasperisager"><b>Twitter</b></a></li>
+              <li><a href="https://github.com/kasperisager"><b>GitHub</b></a></li>
+            </ul>
+          </div>
+
+        </div>
+      </header>
+
+      {{ content }}
+
+      <footer role="contentinfo">
+        <div class="row">
+
+          <div class="column three">
+            <hr>
+            <p class="text-center text-muted">Licensed under the terms of the <a href="http://opensource.org/licenses/MIT">MIT License</a></p>
+          </div>
+
+        </div>
+      </footer>
+    </div>
+
+  </body>
+</html>
