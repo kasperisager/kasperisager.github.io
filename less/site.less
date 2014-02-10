@@ -1,10 +1,20 @@
-@import "vendors/_normalize.less";
-@import "vendors/_boilerplate.less";
+//
+// # Styles
+//
+// No styleguide reference.
 
-@import "globals/_variables.less";
-@import "globals/_mixins.less";
+@bower: "../bower_components";
+@normalize: "@{bower}/normalize-css";
+@boilerplate: "@{bower}/html5-boilerplate/css";
 
-@import "shared/_scaffold.less";
-@import "shared/_helpers.less";
-@import "shared/_grid.less";
-@import "shared/_page.less";
+@import (less) "@{normalize}/normalize.css";
+@import (less) "@{boilerplate}/main.css";
+
+@import (reference) "globals/variables";
+@import (reference) "globals/mixins";
+
+@import "shared/scaffold";
+@import "shared/helpers";
+@import "shared/grid";
+@import "shared/page";
+@import "shared/syntax";
