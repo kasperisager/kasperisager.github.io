@@ -1,0 +1,8 @@
+{% for repo in site.github.public_repositories %}
+  <article class="project" role="article">
+    <p>
+      <span class="text-muted">{{repo.owner.login}}</span> / <b><a href="{{repo.html_url}}">{{repo.name}}</a></b>
+    </p>
+    <p>{{repo.description}}</p>
+  </article>
+{% endfor %}
