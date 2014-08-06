@@ -1,0 +1,33 @@
+// # Page
+//
+// Let's add some personality to the page content itself!
+//
+// No styleguide reference.
+
+header {
+  margin-top: 2.5em;
+
+  h1 {
+    margin-top: 1.5em;
+  }
+
+  h2 {
+    font-weight: 400;
+  }
+
+  ul {
+    margin-top: 2em;
+  }
+}
+
+footer {
+  margin-top: 2.5em;
+}
+
+article {
+  + article {
+    border-color: #eee;
+    border-style: solid;
+    border-width: 1px 0 0;
+  }
+}

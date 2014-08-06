@@ -1,3 +1,5 @@
 name: Hi!
 markdown: redcarpet
 highlighter: pygments
+sass:
+  style: :compressed

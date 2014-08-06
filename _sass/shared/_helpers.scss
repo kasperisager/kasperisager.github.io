@@ -1,0 +1,26 @@
+// # Helper classes
+//
+// I hate repeating myself and that's a fact.
+//
+// No styleguide reference.
+
+// Float helpers
+@media (min-width: $container) {
+  .pull-right { float: right; }
+  .pull-left  { float: left; }
+}
+
+// Text helpers
+.text-right   { text-align: right; }
+.text-left    { text-align: left; }
+.text-center  { text-align: center; }
+.text-muted   { color: lighten($text-color, 25%); }
+
+// Display helpers
+.display-inline       { display: inline; }
+.display-inline-block { display: inline-block; }
+.display-block        { display: block; }
+.display-block.center { margin: 0 auto; }
+
+// Misc. helpers
+.round { border-radius: 1000px; }

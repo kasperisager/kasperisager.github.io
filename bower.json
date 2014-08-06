@@ -1,0 +1,8 @@
+{
+  "name": "kasperisager.github.io",
+  "private": true,
+  "dependencies": {
+    "normalize-scss": "3.x.x",
+    "bourbon": "4.x.x"
+  }
+}
