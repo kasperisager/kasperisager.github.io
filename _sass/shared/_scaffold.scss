@@ -13,6 +13,7 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 18px;
+  line-height: 1.4;
   color: $text-color;
   text-shadow: 0 1px $body-bg;
   background-color: $body-bg;
@@ -43,4 +44,13 @@ ol {
       margin: 0 .5em;
     }
   }
+}
+
+hr {
+  display: block;
+  height: 1px;
+  padding: 0;
+  margin: 1em 0;
+  border: 0;
+  border-top: 1px solid #ccc;
 }
