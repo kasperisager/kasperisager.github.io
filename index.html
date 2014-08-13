@@ -36,6 +36,21 @@ title: Hi!
       {% endfor %}
     </div>
   </section>
+
+  <section class="education row">
+    <div ckass="column three">
+      <h2>Education</h2>
+
+      {% for education in site.data.educations %}
+        <article class="education" role="article">
+          <p>
+            <b>{{ education.degree }}</b> @ {{ education.school  }}
+            <br><small class="text-muted">{{ education.date.start }} - {{ education.date.end }}</small>
+          </p>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
 </main>
 
 <footer role="contentinfo">
