@@ -21,7 +21,7 @@ title: Hi!
 </header>
 
 <main role="main">
-  <section class="experience row">
+  <section class="experiences row">
     <div class="column three">
       <h2>Experience</h2>
 
@@ -51,6 +51,24 @@ title: Hi!
       {% endfor %}
     </div>
   </section>
+
+  <section class="presentations row">
+    <div class="column three">
+      <h2>Presentations</h2>
+
+      {% for presentation in site.data.presentations %}
+        <article class="presentation" role="article">
+          <p>
+            <b>{{ presentation.title }}</b> @ <a href="{{ presentation.place.url }}">{{ presentation.place.name }}</a>
+
+            <br><small class="text-muted">{{ presentation.date }}</small>
+          </p>
+          <p>{{ presentation.tagline | markdownify }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
 </main>
 
 <footer role="contentinfo">
