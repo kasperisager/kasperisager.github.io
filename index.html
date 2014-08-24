@@ -59,7 +59,7 @@ title: Hi!
       {% for presentation in site.data.presentations %}
         <article class="presentation" role="article">
           <p>
-            <b>{{ presentation.title }}</b> @ <a href="{{ presentation.place.url }}">{{ presentation.place.name }}</a>
+            <b><a href="{{ presentation.url }}">{{ presentation.title }}</a></b> @ <a href="{{ presentation.place.url }}">{{ presentation.place.name }}</a>
 
             <br><small class="text-muted">{{ presentation.date }}</small>
           </p>
