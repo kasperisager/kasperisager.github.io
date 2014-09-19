@@ -1,4 +1,13 @@
-- position: "Web Design and Development"
+- position: "Owner"
+  company:
+    name: "Funktionél"
+    url: "http://funktionel.co"
+  date:
+    start: "September 2014"
+    end: "Current"
+  description: "Funktionél is a software development consultancy offering services primarily in web development."
+
+- position: "Web Designer and Developer"
   company:
     name: "Vanilla Forums"
     url: "http://vanillaforums.com"
