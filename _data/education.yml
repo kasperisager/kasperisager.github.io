@@ -1,5 +1,7 @@
 - degree: "B.Sc. in Software Development"
-  school: "IT University of Copenhagen"
+  school:
+    name: "IT University of Copenhagen"
+    url: "https://itu.dk"
   date:
     start: "2014"
     end: "2017 (Expected)"

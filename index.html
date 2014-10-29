@@ -44,7 +44,7 @@ title: "Hi!"
       {% for course in site.data.education %}
         <article class="course" role="article">
           <p>
-            <b>{{ course.degree }}</b> @ {{ course.school  }}
+	    <b>{{ course.degree }}</b> @ <a href="{{ course.school.url }}">{{ course.school.name }}</a>
             <br><small class="text-muted">{{ course.date.start }} - {{ course.date.end }}</small>
           </p>
         </article>
