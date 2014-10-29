@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Hi!
 ---
 
 <header role="banner">
@@ -25,13 +24,13 @@ title: Hi!
     <div class="column three">
       <h2>Experience</h2>
 
-      {% for experience in site.data.experiences %}
+      {% for job in site.data.experience %}
         <article class="job" role="article">
           <p>
-            <b>{{ experience.position }}</b> @ <a href="{{ experience.company.url }}">{{ experience.company.name }}</a>
-            <br><small class="text-muted">{{ experience.date.start }} – {{ experience.date.end }}</small>
+            <b>{{ job.position }}</b> @ <a href="{{ job.company.url }}">{{ job.company.name }}</a>
+            <br><small class="text-muted">{{ job.date.start }} – {{ job.date.end }}</small>
           </p>
-          <p>{{ experience.description | markdownify }}</p>
+          <p>{{ job.description | markdownify }}</p>
         </article>
       {% endfor %}
     </div>
@@ -41,11 +40,11 @@ title: Hi!
     <div class="column three">
       <h2>Education</h2>
 
-      {% for education in site.data.educations %}
-        <article class="education" role="article">
+      {% for course in site.data.education %}
+        <article class="course" role="article">
           <p>
-            <b>{{ education.degree }}</b> @ {{ education.school  }}
-            <br><small class="text-muted">{{ education.date.start }} - {{ education.date.end }}</small>
+            <b>{{ course.degree }}</b> @ {{ course.school  }}
+            <br><small class="text-muted">{{ course.date.start }} - {{ course.date.end }}</small>
           </p>
         </article>
       {% endfor %}

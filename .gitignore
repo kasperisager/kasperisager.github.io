@@ -1,1 +1,5 @@
-_site
+*.lock
+.bundle/
+_site/
+_sass/**/*.md
+_sass/**/*.json

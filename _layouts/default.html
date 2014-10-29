@@ -1,10 +1,18 @@
+---
+layout: compress
+---
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="/css/site.css">
+
+    {% capture scss %}
+      {% include css/critical.scss %}
+    {% endcapture %}
+    <style>{{ scss | scssify }}</style>
   </head>
   <body>
     <div class="container">{{ content }}</div>
