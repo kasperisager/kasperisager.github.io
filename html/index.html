@@ -1,0 +1,113 @@
+---
+layout: layout.html
+
+experience:
+  - position: "Founder"
+    company:
+      name: "Funktionél"
+      url: "https://funktionel.co"
+    date:
+      start: "September 2014"
+      end: "Current"
+    description: "Funktionél is a software development consultancy offering services primarily in web development."
+
+  - position: "Designer and Developer"
+    company:
+      name: "Vanilla Forums"
+      url: "http://vanillaforums.com"
+    date:
+      start: "July 2013"
+      end: "July 2014"
+    description: "User Interface design, prototyping and implementation. I help bring Vanilla Forums to the next level through enjoyable and highly performant front-ends."
+
+  - position: "Consultant"
+    company:
+      name: "Vanilla Forums"
+      url: "http://vanillaforums.com"
+    date:
+      start: "October 2012"
+      end: "July 2013"
+    description: "Designing and implementing custom themes for clients of the Vanilla Forums SaaS-solution."
+
+presentations:
+  - title: "Workflows for the Modern Web"
+    tagline: "An introduction to the world of Frontend Tooling."
+    url: "http://kasperisager.github.io/presentation-tooling"
+    date: "May 2014"
+    place:
+      name: "js-montreal"
+      url: "http://js-montreal.org/"
+
+education:
+  - degree: "B.Sc. in Software Development"
+    school:
+      name: "IT University of Copenhagen"
+      url: "https://itu.dk"
+    date:
+      start: "2014"
+      end: "2017 (Expected)"
+---
+
+<header role="banner">
+  <img class="center" alt="Kasper's Gravatar" width="200" height="200" src="img/avatar@2x.png" srcset="img/avatar.png, img/avatar@2x.png 2x">
+
+  <h1 class="text-center">Hi! My name is Kasper</h1>
+  <h2 class="text-center text-muted">...and I build things for the web.</h2>
+
+  <ul class="inline text-center">
+    <li><a href="mailto:kasperisager@gmail.com"><b>Email</b></a></li>
+    <li><a href="https://twitter.com/kasperisager"><b>Twitter</b></a></li>
+    <li><a href="https://github.com/kasperisager"><b>GitHub</b></a></li>
+  </ul>
+</header>
+
+<main role="main">
+  <section>
+    <h2>Experience</h2>
+
+    <% experience.forEach(function (job) { %>
+      <article role="article">
+        <p>
+          <b><%- job.position %></b> @ <a href="<%- job.company.url %>"><%- job.company.name %></a>
+          <br><small class="text-muted"><%- job.date.start %> – <%- job.date.end %></small>
+        </p>
+        <p><%- job.description %></p>
+      </article>
+    <% }) %>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+
+    <% education.forEach(function (course) { %>
+      <article role="article">
+        <p>
+          <b><%- course.degree %></b> @ <a href="<%- course.school.url %>"><%- course.school.name %></a>
+          <br><small class="text-muted"><%- course.date.start %> - <%- course.date.end %></small>
+        </p>
+      </article>
+    <% }) %>
+  </section>
+
+  <section>
+    <h2>Presentations</h2>
+
+    <% presentations.forEach(function (presentation) { %>
+      <article role="article">
+        <p>
+          <b><a href="<%- presentation.url %>"><%- presentation.title %></a></b>
+          @ <a href="<%- presentation.place.url %>"><%- presentation.place.name %></a>
+
+          <br><small class="text-muted"><%- presentation.date %></small>
+        </p>
+        <p><%- presentation.tagline %></p>
+      </article>
+    <% }) %>
+  </section>
+
+</main>
+
+<footer role="contentinfo">
+  <hr>
+  <p class="text-center text-muted">Licensed under the terms of the MIT License</p>
+</footer>

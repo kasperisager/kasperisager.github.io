@@ -1,0 +1,113 @@
+@import url("https://necolas.github.io/normalize.css/3.0.2/normalize.css");
+
+:root {
+  --text-color: #444;
+  --link-color: #4183c4;
+
+  --font-family-base: Helvetica, Arial, sans-serif;
+  --font-size-base: 18px;
+  --line-height-base: 1.4;
+
+  --heading-font-weight: 300;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--text-color);
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  padding: 0;
+  margin: 1em 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--heading-font-weight);
+}
+
+ul.inline,
+ol.inline {
+  padding-left: 0;
+  list-style: none;
+}
+ul.inline li,
+ol.inline li {
+  display: inline;
+  margin-right: .5em;
+  margin-left: .5em;
+}
+
+header {
+  margin-top: 2.5em;
+}
+header h1 {
+  margin-top: 1.5em;
+}
+header ul {
+  margin-top: 2em;
+}
+
+footer {
+  margin-top: 2.5em;
+}
+
+section + section {
+  margin-top: 2.5em;
+}
+
+article + article {
+  border-top: 1px solid #eee;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: #848484;
+}
+
+.container {
+  max-width: 740px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
