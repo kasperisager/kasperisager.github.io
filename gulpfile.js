@@ -18,9 +18,9 @@ gulp.task("css", ["css:clean"], function () {
       keepSpecialComments: false
     }))
     .pipe($.sourcemaps.write("./", {
-      sourceRoot: "/src/css"
+      sourceRoot: "/css"
     }))
-    .pipe(gulp.dest("dist/css"))
+    .pipe(gulp.dest("dist"))
     .pipe($.livereload())
     .pipe($.size({
       title: "css"
@@ -29,7 +29,7 @@ gulp.task("css", ["css:clean"], function () {
 })
 
 gulp.task("css:clean", function (done) {
-  del(["dist/css/site.css"], done)
+  del(["dist/site.css"], done)
 })
 
 gulp.task("img", ["img:clean"], function () {
@@ -47,7 +47,7 @@ gulp.task("img:clean", function (done) {
   del(["dist/img"], done)
 })
 
-gulp.task("html", ["html:clean"], function () {
+gulp.task("html", ["html:clean", "css"], function () {
   var gulpsmith = require("gulpsmith")
     , _ = require("lodash")
     , $$ = require("load-metalsmith-plugins")()
