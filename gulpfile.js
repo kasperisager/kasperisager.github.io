@@ -105,7 +105,7 @@ gulp.task("serve", ["watch"], function () {
     }))
 })
 
-gulp.task("deploy", ["deploy:clean"], function () {
+gulp.task("deploy", ["deploy:clean", "build"], function () {
   return gulp.src("dist/**")
     .pipe($.plumber())
     .pipe($.ghPages({
