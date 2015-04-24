@@ -45,7 +45,7 @@ gulp.task("html", ["html:clean", "css", "img"], function () {
     , _ = require("lodash")
     , $$ = require("load-metalsmith-plugins")()
 
-  return gulp.src("html/*.html")
+  return gulp.src("html/**/*.html")
     .pipe($.plumber())
     .pipe($.frontMatter().on("data", function (file) {
       _.assign(file, file.frontMatter)
@@ -54,7 +54,7 @@ gulp.task("html", ["html:clean", "css", "img"], function () {
       .use($$.permalinks(":title"))
       .use($$.layouts({
         engine: "ejs"
-      , directory: "html/tpl"
+      , directory: "tpl"
       }))
       .use($$.inPlace({
         engine: "ejs"
@@ -87,7 +87,7 @@ gulp.task("watch", ["build"], function () {
 
   gulp.watch("css/**/*.css", ["css"])
   gulp.watch("img/*", ["img"])
-  gulp.watch("html/**/*.html", ["html"])
+  gulp.watch("{html,tpl}/**/*.html", ["html"])
 })
 
 gulp.task("serve", ["watch"], function () {
