@@ -77,6 +77,9 @@ header h1 {
 header ul {
   margin-top: 2em;
 }
+header img {
+  border-radius: 6px;
+}
 
 footer {
   margin-top: 2.5em;
