@@ -24,22 +24,7 @@ gulp.task('css:clean', function () {
   return del(['dist/css']);
 });
 
-gulp.task('img', ['img:clean'], function () {
-  return gulp.src('img/*')
-    .pipe($.plumber())
-    .pipe($.imagemin())
-    .pipe(gulp.dest('dist/img'))
-    .pipe($.size({
-      title: 'img',
-      showFiles: true
-    }));
-});
-
-gulp.task('img:clean', function () {
-  return del(['dist/img']);
-});
-
-gulp.task('html', ['html:clean', 'css', 'img'], function () {
+gulp.task('html', ['html:clean', 'css'], function () {
   return gulp.src(['html/**/*.html', 'data/*.yaml'])
     .pipe($.plumber())
     .pipe($.frontMatter().on('data', function (file) {
@@ -60,7 +45,6 @@ gulp.task('html', ['html:clean', 'css', 'img'], function () {
         engine: 'ejs'
       }))
     )
-    .pipe($.inlineImageHtml('dist'))
     .pipe($.minifyHtml())
     .pipe(gulp.dest('dist'))
     .pipe($.livereload())
@@ -76,7 +60,6 @@ gulp.task('html:clean', function () {
 
 gulp.task('build', [
   'css',
-  'img',
   'html'
 ]);
 
@@ -86,7 +69,6 @@ gulp.task('watch', ['build'], function () {
   $.livereload.listen();
 
   gulp.watch('css/**/*.css', ['css']);
-  gulp.watch('img/*', ['img']);
   gulp.watch('{html,tpl}/**/*.html', ['html']);
   gulp.watch('data/*.yaml', ['html']);
 });

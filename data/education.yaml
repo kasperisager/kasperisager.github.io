@@ -5,3 +5,29 @@
   date:
     start: "2014"
     end: "2017 (Expected)"
+  description: "The three-year B.Sc. in Software Development teaches design and programming of software, but also communication, presentation and business. This combination of disciplines provides the qualifications for developing and designing IT solutions, as well as providing consultation for businesses and organisations on a given solution."
+
+  courses:
+    - title: Discrete Mathematics
+      ects: 7.5
+      summary: "An introduction to discrete mathematics as a foundation to work within the fields of computer science, information technologies, and software development."
+
+    - title: Project Work and Communication
+      ects: 7.5
+
+    - title: Introductory Programming
+      ects: 15
+      project: https://github.com/kasperisager/bookie
+      summary: "Programming a system for movie theater ticket reservations. As part of the project a type-agnostic ORM was implemented with support for MySQL, PostgreSQL, and SQLite."
+
+    - title: Systematic Design of User Interfaces
+      ects: 7.5
+
+    - title: Algorithms and Data Structures
+      ects: 7.5
+      summary: "Designing efficient and correct programs, while giving basic algorithmic tools indispensible for every software developer."
+
+    - title: First-year Project
+      ects: 15
+      project: https://github.com/kasperisager/kelvin-maps
+      summary: "Programming a system for visualization and navigation of maps. Implemented algorithms and data structures include Djikstra, rectangle trees, k-dimensional trees, and ternary search trees."

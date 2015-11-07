@@ -20,7 +20,7 @@ layout: layout.html
     <h2>Experience</h2>
 
     <% experience.forEach(function (job) { %>
-      <article role="article">
+      <article class="compact" role="article">
         <p>
           <b><%- job.position %></b> @ <a href="<%- job.company.url %>"><%- job.company.name %></a>
           <br><small class="text-muted"><%- job.date.start %> – <%- job.date.end %></small>
@@ -34,11 +34,33 @@ layout: layout.html
     <h2>Education</h2>
 
     <% education.forEach(function (course) { %>
-      <article role="article">
+      <article class="compact" role="article">
         <p>
           <b><%- course.degree %></b> @ <a href="<%- course.school.url %>"><%- course.school.name %></a>
           <br><small class="text-muted"><%- course.date.start %> - <%- course.date.end %></small>
         </p>
+        <p><%- course.description %></p>
+
+        <% if (course.courses) { %>
+          <section>
+            <h3>Courses</h3>
+
+            <ul class="card-list list-unstyled small">
+              <% course.courses.forEach(function (course) { %>
+                <li class="card">
+                  <span class="text-muted pull-right"><%- course.ects %> ECTS</span>
+                  <b><%- course.title %></b>
+                  <% if (course.project) { %>
+                    &middot; <a href="<%- course.project %>">Project link</a>
+                  <% } %>
+                  <% if (course.summary) { %>
+                    <br><%- course.summary %>
+                  <% } %>
+                </li>
+              <% }) %>
+            </ul>
+          </section>
+        <% } %>
       </article>
     <% }) %>
   </section>
@@ -47,7 +69,7 @@ layout: layout.html
     <h2>Presentations</h2>
 
     <% presentations.forEach(function (presentation) { %>
-      <article role="article">
+      <article class="compact" role="article">
         <p>
           <b><a href="<%- presentation.url %>"><%- presentation.title %></a></b>
           @ <a href="<%- presentation.place.url %>"><%- presentation.place.name %></a>
@@ -62,5 +84,5 @@ layout: layout.html
 
 <footer role="contentinfo">
   <hr>
-  <p class="text-center text-muted">Licensed under the terms of the MIT License</p>
+  <p class="text-center text-muted small">Licensed under the terms of the MIT License</p>
 </footer>

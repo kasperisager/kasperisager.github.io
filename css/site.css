@@ -9,11 +9,12 @@
 :root {
   /* Colors */
   --text-color: #444;
-  --link-color: #4183c4;
+  --link-color: #4c9cff;
 
   /* Typography */
-  --font-family-base: Helvetica, Arial, sans-serif;
+  --font-family-base: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-size-base: 18px;
+  --font-size-small: 80%;
   --line-height-base: 1.5;
 
   /* Headings */
@@ -34,6 +35,7 @@ html {
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
   color: var(--text-color);
+  text-shadow: 0 1px #fff;
   box-sizing: border-box;
 }
 
@@ -44,6 +46,10 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+b {
+  font-weight: 500;
 }
 
 img {
@@ -57,7 +63,12 @@ hr {
   padding: 0;
   margin: 1em 0;
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #eee;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
 }
 
 h1,
@@ -69,8 +80,14 @@ h6 {
   font-weight: var(--heading-font-weight);
 }
 
+small,
+.small {
+  font-size: var(--font-size-small);
+}
+
 ul.inline,
-ol.inline {
+ol.inline,
+.list-unstyled {
   padding-left: 0;
   list-style: none;
 }
@@ -98,12 +115,26 @@ header img {
   border-radius: 6px;
 }
 
+footer {
+  margin-top: 2.5em;
+}
+
 section + section {
   margin-top: 2.5em;
 }
 
 article + article {
+  padding-top: 1em;
+  margin-top: 1em;
   border-top: 1px solid #eee;
+}
+
+.compact > *:first-child {
+  margin-top: 0;
+}
+
+.compact > *:last-child {
+  margin-bottom: 0;
 }
 
 .text-center {
@@ -126,4 +157,19 @@ article + article {
   display: block;
   margin-right: auto;
   margin-left: auto;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.card {
+  padding: 1em 1.25em;
+  margin: 1em -1.25em;
+  border: 1px solid #eee;
+  border-radius: 3px;
 }
