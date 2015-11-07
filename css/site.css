@@ -1,15 +1,27 @@
+/* Vendors
+ * -------------------------------------------------------------------------- */
+
 @import url("https://necolas.github.io/normalize.css/3.0.2/normalize.css");
 
+/* Variables
+ * -------------------------------------------------------------------------- */
+
 :root {
+  /* Colors */
   --text-color: #444;
   --link-color: #4183c4;
 
+  /* Typography */
   --font-family-base: Helvetica, Arial, sans-serif;
   --font-size-base: 18px;
   --line-height-base: 1.5;
 
+  /* Headings */
   --heading-font-weight: 300;
 }
+
+/* Styles
+ * -------------------------------------------------------------------------- */
 
 *,
 *:before,
@@ -29,6 +41,7 @@ a {
   color: var(--link-color);
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
@@ -61,6 +74,7 @@ ol.inline {
   padding-left: 0;
   list-style: none;
 }
+
 ul.inline li,
 ol.inline li {
   display: inline;
@@ -71,18 +85,17 @@ ol.inline li {
 header {
   margin-top: 2.5em;
 }
+
 header h1 {
   margin-top: 1.5em;
 }
+
 header ul {
   margin-top: 2em;
 }
+
 header img {
   border-radius: 6px;
-}
-
-footer {
-  margin-top: 2.5em;
 }
 
 section + section {

@@ -1,8 +1,14 @@
 {
   "name": "kasperisager.github.io",
   "private": true,
+  "scripts": {
+    "test": "xo"
+  },
+  "xo": {
+    "space": true
+  },
   "devDependencies": {
-    "del": "^1.1.1",
+    "del": "^2.0.2",
     "ejs": "^2.3.1",
     "gulp": "^3.8.11",
     "gulp-cssnext": "^1.0.0",
@@ -11,18 +17,20 @@
     "gulp-imagemin": "^2.2.1",
     "gulp-inline-image-html": "^0.2.1",
     "gulp-livereload": "^3.8.0",
-    "gulp-load-plugins": "^0.10.0",
+    "gulp-load-plugins": "^1.0.0",
     "gulp-minify-css": "^1.0.0",
     "gulp-minify-html": "^1.0.2",
     "gulp-plumber": "^1.0.0",
-    "gulp-size": "^1.2.1",
+    "gulp-size": "^2.0.0",
     "gulp-webserver": "^0.9.0",
     "gulpsmith": "^0.5.3",
     "load-metalsmith-plugins": "^0.1.1",
     "lodash": "^3.7.0",
-    "metalsmith": "^1.6.0",
+    "metalsmith": "^2.1.0",
     "metalsmith-in-place": "^1.0.1",
     "metalsmith-layouts": "^1.0.0",
-    "metalsmith-permalinks": "^0.4.0"
+    "metalsmith-metadata": "0.0.2",
+    "metalsmith-permalinks": "^0.4.0",
+    "xo": "^0.10.0"
   }
 }
