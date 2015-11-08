@@ -30,4 +30,4 @@
     - title: First-year Project
       ects: 15
       project: https://github.com/kasperisager/kelvin-maps
-      summary: "Programming a system for visualization and navigation of maps. Implemented algorithms and data structures include Djikstra, rectangle trees, k-dimensional trees, and ternary search trees."
+      summary: "Programming a system for visualization and navigation of maps. Implemented algorithms and data structures include Dijkstra, rectangle trees, k-dimensional trees, and ternary search trees."
