@@ -12,14 +12,24 @@
   --link-color: #4c9cff;
 
   /* Typography */
-  --font-family-base: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-size-base: 18px;
+  --font-family-base: -apple-systrem, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-size-base: .85rem;
+  --font-size-tablet: 1rem;
   --font-size-small: 80%;
   --line-height-base: 1.5;
 
   /* Headings */
   --heading-font-weight: 300;
+
+  /* Avatar */
+  --avatar-size-base: 120px;
+  --avatar-size-tablet: 200px;
 }
+
+/* Media quries
+ * -------------------------------------------------------------------------- */
+
+@custom-media --tablet (min-width: 540px);
 
 /* Styles
  * -------------------------------------------------------------------------- */
@@ -37,6 +47,12 @@ html {
   color: var(--text-color);
   text-shadow: 0 1px #fff;
   box-sizing: border-box;
+}
+
+@media (--tablet) {
+  html {
+    font-size: var(--font-size-tablet);
+  }
 }
 
 a {
@@ -61,14 +77,14 @@ hr {
   display: block;
   height: 1px;
   padding: 0;
-  margin: 1em 0;
+  margin: 1rem 0;
   border: 0;
   border-top: 1px solid #eee;
 }
 
 p {
   margin-top: 0;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 h1,
@@ -95,20 +111,20 @@ ol.inline,
 ul.inline li,
 ol.inline li {
   display: inline;
-  margin-right: .5em;
-  margin-left: .5em;
+  margin-right: .5rem;
+  margin-left: .5rem;
 }
 
 header {
-  margin-top: 2.5em;
+  margin-top: 2.5rem;
 }
 
 header h1 {
-  margin-top: 1.5em;
+  margin-top: 1.5rem;
 }
 
 header ul {
-  margin-top: 2em;
+  margin-top: 2rem;
 }
 
 header img {
@@ -116,16 +132,16 @@ header img {
 }
 
 footer {
-  margin-top: 2.5em;
+  margin-top: 2.5rem;
 }
 
 section + section {
-  margin-top: 2.5em;
+  margin-top: 2.5rem;
 }
 
 article + article {
-  padding-top: 1em;
-  margin-top: 1em;
+  padding-top: 1rem;
+  margin-top: 1rem;
   border-top: 1px solid #eee;
 }
 
@@ -168,8 +184,20 @@ article + article {
 }
 
 .card {
-  padding: 1em 1.25em;
-  margin: 1em -1.25em;
+  padding: 1rem 1.25rem;
+  margin: 1rem -1.25rem;
   border: 1px solid #eee;
   border-radius: 3px;
+}
+
+.avatar {
+  width: var(--avatar-size-base);
+  height: var(--avatar-size-base);
+}
+
+@media (--tablet) {
+  .avatar {
+    width: var(--avatar-size-tablet);
+    height: var(--avatar-size-tablet);
+  }
 }
