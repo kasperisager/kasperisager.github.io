@@ -5,7 +5,7 @@
   date:
     start: "November 2015"
     end: "Current"
-  description: "Application developer on the Web Accessibility product offered by Siteimprove. I help ensure that the product offers reliable conformance checking of the WCAG 2.0."
+  description: "JavaScript application developer on the Web Accessibility product offered by Siteimprove. I help ensure that the product offers reliable programmatic conformance checking of the WCAG 2.0."
 
 - position: "Founder"
   company:
@@ -14,22 +14,13 @@
   date:
     start: "September 2014"
     end: "Current"
-  description: "Funktionél is a software development consultancy offering services primarily in web development."
+  description: "Funktionél is a software development consultancy offering services primarily in web development. We develop functional solutions for individuals as well as small to medium sized businesses."
 
 - position: "Designer and Developer"
   company:
     name: "Vanilla Forums"
     url: "http://vanillaforums.com"
   date:
-    start: "July 2013"
-    end: "July 2014"
-  description: "User Interface design, prototyping and implementation. I help bring Vanilla Forums to the next level through enjoyable and highly performant front-ends."
-
-- position: "Consultant"
-  company:
-    name: "Vanilla Forums"
-    url: "http://vanillaforums.com"
-  date:
     start: "October 2012"
-    end: "July 2013"
-  description: "Designing and implementing custom themes for clients of the Vanilla Forums SaaS-solution."
+    end: "July 2014"
+  description: "User Interface design, prototyping and implementation. I help bring Vanilla Forums to the next level through enjoyable and highly performant front-ends. My work includes many of the default desktop themes as well as the <a href=https://blog.vanillaforums.com/features/introducing-new-mobile-theme-lithe/>mobile theme</a>. I also implemented themes for clients such as <a href=http://forums.elderscrollsonline.com/en>The Elder Scrolls Online</a>, <a href=https://discussions.agilebits.com/>AgileBits</a>, <a href=https://www.rumblegames.com/ballistic/forum#/categories/ballistic>Rumble Entertainment</a>, and many more."
