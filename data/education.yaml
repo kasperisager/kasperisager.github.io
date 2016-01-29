@@ -31,3 +31,14 @@
       ects: 15
       project: https://github.com/kasperisager/kelvin-maps
       summary: "Programming a system for visualization and navigation of maps. Implemented algorithms and data structures include Dijkstra, rectangle trees, k-dimensional trees, and ternary search trees."
+
+    - title: Introduction to Database Design
+      ects: 7.5
+      summary: "An introduction to relational databases as well as data analytics, both from a practical and theoretical point of view."
+
+    - title: Mobile and Distributed Systems
+      ects: 7.5
+      summary: "An introduction to the fundamental architectures, principles, and models used in designing and constructing mobile and distributed systems."
+
+    - title: 	Analysis, Design and Software Architecture
+      ects: 15

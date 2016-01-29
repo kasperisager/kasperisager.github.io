@@ -1,7 +1,7 @@
 /* Vendors
  * -------------------------------------------------------------------------- */
 
-@import url("https://necolas.github.io/normalize.css/3.0.2/normalize.css");
+@import url("normalize.css");
 
 /* Variables
  * -------------------------------------------------------------------------- */
@@ -16,7 +16,7 @@
   --font-size-base: .85rem;
   --font-size-tablet: 1rem;
   --font-size-small: 80%;
-  --line-height-base: 1.5;
+  --line-height-base: 1.7;
 
   /* Headings */
   --heading-font-weight: 300;

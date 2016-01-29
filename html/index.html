@@ -31,6 +31,22 @@ layout: layout.html
   </section>
 
   <section>
+    <h2>Presentations</h2>
+
+    <% presentations.forEach(function (presentation) { %>
+      <article class="compact" role="article">
+        <p>
+          <b><a href="<%- presentation.url %>"><%- presentation.title %></a></b>
+          @ <a href="<%- presentation.place.url %>"><%- presentation.place.name %></a>
+
+          <br><small class="text-muted"><%- presentation.date %></small>
+        </p>
+        <p><%- presentation.tagline %></p>
+      </article>
+    <% }) %>
+  </section>
+
+  <section>
     <h2>Education</h2>
 
     <% education.forEach(function (course) { %>
@@ -61,22 +77,6 @@ layout: layout.html
             </ul>
           </section>
         <% } %>
-      </article>
-    <% }) %>
-  </section>
-
-  <section>
-    <h2>Presentations</h2>
-
-    <% presentations.forEach(function (presentation) { %>
-      <article class="compact" role="article">
-        <p>
-          <b><a href="<%- presentation.url %>"><%- presentation.title %></a></b>
-          @ <a href="<%- presentation.place.url %>"><%- presentation.place.name %></a>
-
-          <br><small class="text-muted"><%- presentation.date %></small>
-        </p>
-        <p><%- presentation.tagline %></p>
       </article>
     <% }) %>
   </section>
