@@ -184,10 +184,22 @@ article + article {
 }
 
 .card {
-  padding: 1rem 1.25rem;
-  margin: 1rem -1.25rem;
+  padding: 0.85rem 1.25rem;
   border: 1px solid #eee;
-  border-radius: 3px;
+}
+
+.card:first-child {
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.card:last-child {
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.card + .card {
+  margin-top: -1px;
 }
 
 .avatar {
