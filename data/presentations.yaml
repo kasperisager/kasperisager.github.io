@@ -1,6 +1,6 @@
 - title: "Workflows for the Modern Web"
-  tagline: "An introduction to the world of Frontend Tooling."
-  url: "http://kasperisager.github.io/presentation-tooling"
+  tagline: "Writing JavaScript applications for the browser is often a chaotic and fragmented experience. With a vast selection of technology at our disposal, bringing it all together is often time consuming and prone to error. This presentation introduces many of the tools used in modern front-end development for improving the overall development experience."
+  url: "https://kasperisager.github.io/presentation-tooling"
   date: "May 2014"
   place:
     name: "js-montreal"

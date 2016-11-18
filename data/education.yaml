@@ -33,6 +33,21 @@
 
     - title: Mobile and Distributed Systems
       ects: 7.5
+      project: https://github.com/kasperisager/chord
 
-    - title: 	Analysis, Design and Software Architecture
+    - title: Analysis, Design and Software Architecture
       ects: 15
+
+    - title: Advanced Algorithms Seminar
+      ects: 7.5
+      project: https://github.com/kasperisager/hemingway
+
+    - title: Functional Programming
+      ects: 7.5
+
+    - title: System Development and Project Organization
+      ects: 7.5
+
+    - title: Second-year Project
+      ects: 7.5
+      project: https://github.com/bndn
