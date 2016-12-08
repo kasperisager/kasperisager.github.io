@@ -5,3 +5,11 @@
   place:
     name: "js-montreal"
     url: "http://js-montreal.org"
+
+- title: "Leveling up CSS"
+  tagline: "Writing, scaling, and maintaining plain CSS codebases used to be a pain and pre-processors came along to save the day. Things are however moving fast and CSS is catching up with the pre-processors and is becoming increasingly expressive. This presentation introduces some of the new specifications in CSS and makes an argument against the pre-processors of today."
+  url: "https://kasperisager.github.io/presentation-postcss"
+  date: "November 2016"
+  place:
+    name: "Siteimprove"
+    url: "http://siteimprove.com"

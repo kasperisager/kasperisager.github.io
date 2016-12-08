@@ -51,3 +51,13 @@
     - title: Second-year Project
       ects: 7.5
       project: https://github.com/bndn
+
+    - title: Programs as Data
+      ects: 7.5
+
+    - title: Business Processes and Organisation
+      ects: 15
+
+    - title: Operating Systems and C
+      ects: 7.5
+      project: https://github.com/kasperisager/bosh

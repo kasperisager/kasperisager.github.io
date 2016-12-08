@@ -12,10 +12,11 @@
   --link-color: #4c9cff;
 
   /* Typography */
-  --font-family-base: -apple-systrem, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-family-base: "Fira Sans", sans-serif;
   --font-size-base: .85rem;
   --font-size-tablet: 1rem;
   --font-size-small: 80%;
+  --font-weight-base: 300;
   --line-height-base: 1.7;
 
   /* Headings */
@@ -43,6 +44,7 @@
 html {
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
+  font-weight: var(--font-weight-base);
   line-height: var(--line-height-base);
   color: var(--text-color);
   text-shadow: 0 1px #fff;
