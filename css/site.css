@@ -130,7 +130,7 @@ header ul {
 }
 
 header img {
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
 footer {
@@ -191,13 +191,13 @@ article + article {
 }
 
 .card:first-child {
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
 }
 
 .card:last-child {
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
 }
 
 .card + .card {

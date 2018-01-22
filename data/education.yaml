@@ -4,7 +4,7 @@
     url: "https://itu.dk"
   date:
     start: "2014"
-    end: "2017 (Expected)"
+    end: "2017"
   description: "The three-year B.Sc. in Software Development teaches design and programming of software, but also communication, presentation and business. This combination of disciplines provides the qualifications for developing and designing IT solutions, as well as providing consultation for businesses and organisations on a given solution."
 
   courses:
@@ -50,7 +50,7 @@
 
     - title: Second-year Project
       ects: 7.5
-      project: https://github.com/bndn
+      project: https://github.com/itu-bndn
 
     - title: Programs as Data
       ects: 7.5
@@ -61,3 +61,13 @@
     - title: Operating Systems and C
       ects: 7.5
       project: https://github.com/kasperisager/bosh
+
+    - title: Advanced Programming
+      ects: 7.5
+
+    - title: Reflections on IT
+      ects: 7.5
+
+    - title: Thesis
+      ects: 15
+      project: https://github.com/kasperisager/partitionist

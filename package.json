@@ -2,7 +2,9 @@
   "name": "kasperisager.github.io",
   "private": true,
   "scripts": {
-    "test": "xo"
+    "start": "gulp serve",
+    "test": "xo",
+    "deploy": "gulp deploy"
   },
   "xo": {
     "space": true,

@@ -13,3 +13,19 @@
   place:
     name: "Siteimprove"
     url: "http://siteimprove.com"
+
+- title: "An introduction to Terraform"
+  tagline: "Terraform makes it easy to configure and provision cloud resources across a large number of providers and brings with it both collaborative ascepts, reproducibility, and predictability. This presentation gives a short introduction to Terraform, its benefits, and why you should most likely be using it."
+  url: "https://kasperisager.github.io/presentation-terraform"
+  date: "February 2017"
+  place:
+    name: "Siteimprove"
+    url: "http://siteimprove.com"
+
+- title: "Coding for Accessibility"
+  tagline: "While it might come off as difficult, and certainly sometimes can be, coding for accessibility essentially boils down to two rather simple things: Mindset and semantics. This presentation gives a brief introduction to these two concepts and provides some practical advice on turning inaccessible UI accessibile."
+  url: "https://kasperisager.github.io/presentation-coding-for-accessibility"
+  date: "November 2017"
+  place:
+    name: "Codher"
+    url: "http://www.codher.com"

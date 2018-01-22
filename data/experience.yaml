@@ -1,22 +1,31 @@
+- position: "Product Owner"
+  company:
+    name: "Siteimprove"
+    url: "http://siteimprove.dk"
+  date:
+    start: "February 2018"
+    end: "Current"
+  description: "Product owner of the Accessibility product offered by Siteimprove. I lead the research and development of our accessibility conformance testing engine, Alfa, and its surrounding ecosystem."
+
 - position: "Developer"
   company:
     name: "Siteimprove"
     url: "http://siteimprove.dk"
   date:
     start: "November 2015"
-    end: "Current"
-  description: "JavaScript application developer on the Web Accessibility product offered by Siteimprove. I develop tools for performing reliable programmatic conformance checking of the WCAG 2.0."
+    end: "January 2018"
+  description: "Software developer on the Accessibility product offered by Siteimprove. I develop tools for performing reliable accessibility conformance testing of the WCAG. I also had a brief stint with our Core team developing the Siteimprove UI component library."
 
-- position: "Founder"
+- position: "Consultant"
   company:
     name: "Funktionél"
     url: "https://funktionel.co"
   date:
     start: "September 2014"
     end: "Current"
-  description: "Funktionél is a software development consultancy offering services primarily in web development. We develop functional solutions for individuals as well as small to medium sized businesses."
+  description: "Funktionél is my software development consultancy offering services primarily in web development. We develop functional solutions for individuals as well as small to medium sized businesses. I primarily use Funktionél as a means of supporting my work in open source."
 
-- position: "Designer and Developer"
+- position: "Developer"
   company:
     name: "Vanilla Forums"
     url: "http://vanillaforums.com"
