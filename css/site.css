@@ -8,13 +8,15 @@
 
 :root {
   /* Colors */
-  --text-color: #444;
-  --link-color: #4c9cff;
+  --text-color: #333;
+  --link-color: #0067e6;
+  --muted-color: #767676;
 
   /* Typography */
   --font-family-base: "Fira Sans", sans-serif;
-  --font-size-base: .85rem;
-  --font-size-tablet: 1rem;
+  /* --font-family-base: system-ui, sans-serif; */
+  --font-size-base: 1rem;
+  --font-size-tablet: 1.2rem;
   --font-size-small: 80%;
   --font-weight-base: 300;
   --line-height-base: 1.7;
@@ -59,14 +61,18 @@ html {
 
 a {
   color: var(--link-color);
-  text-decoration: none;
+  text-shadow: 1px 0 #fff, -1px 0 #fff;
 }
 
-a:hover {
-  text-decoration: underline;
+:focus {
+  outline-color: color(var(--link-color) alpha(25%));
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 1px;
 }
 
-b {
+b,
+strong {
   font-weight: 500;
 }
 
@@ -79,7 +85,7 @@ hr {
   display: block;
   height: 1px;
   padding: 0;
-  margin: 1rem 0;
+  margin: 1.6rem 0;
   border: 0;
   border-top: 1px solid #eee;
 }
@@ -135,6 +141,7 @@ header img {
 
 footer {
   margin-top: 2.5rem;
+  margin-bottom: 1.6rem;
 }
 
 section + section {
@@ -142,8 +149,8 @@ section + section {
 }
 
 article + article {
-  padding-top: 1rem;
-  margin-top: 1rem;
+  padding-top: 1.6rem;
+  margin-top: 1.6rem;
   border-top: 1px solid #eee;
 }
 
@@ -160,7 +167,7 @@ article + article {
 }
 
 .text-muted {
-  color: #848484;
+  color: var(--muted-color);
 }
 
 .container {

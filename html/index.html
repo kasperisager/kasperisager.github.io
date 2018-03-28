@@ -2,26 +2,42 @@
 layout: layout.html
 ---
 
-<header role="banner">
-  <img class="center avatar" alt="Kasper's Avatar" src="https://github.com/kasperisager.png">
+<header>
+  <picture>
+    <source
+      media="(max-width: 539px)"
+      srcset="
+        https://avatars0.githubusercontent.com/u/1174718?v=4&s=120,
+        https://avatars0.githubusercontent.com/u/1174718?v=4&s=240 2x
+      ">
+    <source
+      media="(min-width: 540px)"
+      srcset="
+        https://avatars0.githubusercontent.com/u/1174718?v=4&s=200,
+        https://avatars0.githubusercontent.com/u/1174718?v=4&s=400 2x
+      ">
+    <img class="center avatar" alt="Kasper's Avatar" src="https://github.com/kasperisager.png">
+  <picture>
 
   <h1 class="text-center">Hi! My name is Kasper</h1>
   <h2 class="text-center text-muted">...and I build things for the internet</h2>
 
   <ul class="inline text-center">
-    <li><a href="mailto:kasperisager@gmail.com"><b>Email</b></a></li>
-    <li><a href="https://github.com/kasperisager"><b>GitHub</b></a></li>
+    <li><a href="mailto:kasperisager@gmail.com"><strong>Email</strong></a></li>
+    <li><a href="https://github.com/kasperisager"><strong>GitHub</strong></a></li>
   </ul>
 </header>
 
-<main role="main">
-  <section>
-    <h2>Experience</h2>
+<main>
+  <section aria-labelledby="experience">
+    <h2 id="experience">Experience</h2>
 
-    <% experience.forEach(function (job) { %>
-      <article class="compact" role="article">
+    <% experience.forEach(function (job, i) { %>
+      <article class="compact" aria-labelledby="experience-<%- i %>">
         <p>
-          <b><%- job.position %></b> @ <a href="<%- job.company.url %>"><%- job.company.name %></a>
+          <span id="experience-<%- i %>">
+            <strong><%- job.position %></strong> @ <a href="<%- job.company.url %>"><%- job.company.name %></a>
+          </span>
           <br><small class="text-muted"><%- job.date.start %> – <%- job.date.end %></small>
         </p>
         <p><%- job.description %></p>
@@ -29,13 +45,15 @@ layout: layout.html
     <% }) %>
   </section>
 
-  <section>
-    <h2>Presentations</h2>
+  <section aria-labelledby="presentations">
+    <h2 id="presentations">Presentations</h2>
 
-    <% presentations.forEach(function (presentation) { %>
-      <article class="compact" role="article">
+    <% presentations.forEach(function (presentation, i) { %>
+      <article class="compact" aria-labelledby="presentation-<%- i %>">
         <p>
-          <b><a href="<%- presentation.url %>"><%- presentation.title %></a></b>
+          <span id="presentation-<%- i %>">
+            <strong><a href="<%- presentation.url %>"><%- presentation.title %></a></strong>
+          </span>
           @ <a href="<%- presentation.place.url %>"><%- presentation.place.name %></a>
 
           <br><small class="text-muted"><%- presentation.date %></small>
@@ -45,28 +63,30 @@ layout: layout.html
     <% }) %>
   </section>
 
-  <section>
-    <h2>Education</h2>
+  <section aria-labelledby="education">
+    <h2 id="education">Education</h2>
 
-    <% education.forEach(function (course) { %>
-      <article class="compact" role="article">
+    <% education.forEach(function (course, i) { %>
+      <article class="compact" aria-labelledby="education-<%- i %>">
         <p>
-          <b><%- course.degree %></b> @ <a href="<%- course.school.url %>"><%- course.school.name %></a>
+          <span id="education-<%- i %>">
+            <strong><%- course.degree %></strong> @ <a href="<%- course.school.url %>"><%- course.school.name %></a>
+          </span>
           <br><small class="text-muted"><%- course.date.start %> - <%- course.date.end %></small>
         </p>
         <p><%- course.description %></p>
 
         <% if (course.courses) { %>
-          <section>
-            <h3>Courses</h3>
+          <section aria-labelledby="courses">
+            <h3 id="courses">Courses</h3>
 
             <ul class="card-list list-unstyled small">
               <% course.courses.forEach(function (course) { %>
                 <li class="card">
                   <span class="text-muted pull-right"><%- course.ects %> ECTS</span>
-                  <b><%- course.title %></b>
+                  <strong><%- course.title %></strong>
                   <% if (course.project) { %>
-                    &middot; <a href="<%- course.project %>">Project link</a>
+                    &middot; <a href="<%- course.project %>" title="Project link for <%- course.title %>">Project link</a>
                   <% } %>
                 </li>
               <% }) %>
@@ -78,7 +98,7 @@ layout: layout.html
   </section>
 </main>
 
-<footer role="contentinfo">
+<footer>
   <hr>
   <p class="text-center text-muted small">Licensed under the terms of the MIT License</p>
 </footer>

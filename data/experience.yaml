@@ -1,7 +1,7 @@
 - position: "Product Owner"
   company:
     name: "Siteimprove"
-    url: "http://siteimprove.dk"
+    url: "https://siteimprove.com"
   date:
     start: "February 2018"
     end: "Current"
@@ -10,7 +10,7 @@
 - position: "Developer"
   company:
     name: "Siteimprove"
-    url: "http://siteimprove.dk"
+    url: "https://siteimprove.com"
   date:
     start: "November 2015"
     end: "January 2018"
@@ -28,7 +28,7 @@
 - position: "Developer"
   company:
     name: "Vanilla Forums"
-    url: "http://vanillaforums.com"
+    url: "https://vanillaforums.com"
   date:
     start: "October 2012"
     end: "July 2014"
