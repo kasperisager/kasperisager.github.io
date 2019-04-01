@@ -5,7 +5,7 @@
   date:
     start: "February 2018"
     end: "Current"
-  description: "Product owner of the Accessibility product offered by Siteimprove. I lead the research and development of our accessibility conformance testing engine, Alfa, and its surrounding ecosystem."
+  description: "Product owner of the Accessibility product offered by Siteimprove. I lead the research and development of our accessibility conformance testing engine, <a href=\"https://github.com/siteimprove/alfa\">Alfa</a>, and its surrounding ecosystem."
 
 - position: "Developer"
   company:

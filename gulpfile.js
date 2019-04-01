@@ -1,12 +1,11 @@
 const gulp = require('gulp');
 const $ = require('gulp-load-plugins')();
 const del = require('del');
-const gulpsmith = require('gulpsmith');
-const _ = require('lodash');
-const $$ = require('load-metalsmith-plugins')();
+const yml = require('require-yml');
 
-gulp.task('css', ['css:clean'], () => gulp.src('css/*.css')
-  .pipe($.plumber())
+gulp.task('css:clean', () => del(['dist/css']));
+
+gulp.task('css:build', () => gulp.src('css/*.css')
   .pipe($.postcss([
     require('postcss-import')(),
     require('postcss-url')(),
@@ -21,31 +20,13 @@ gulp.task('css', ['css:clean'], () => gulp.src('css/*.css')
   }))
 );
 
-gulp.task('css:clean', () => del(['dist/css']));
+gulp.task('css', gulp.series('css:clean', 'css:build'));
 
-gulp.task('html', ['html:clean', 'css'], () => gulp.src(['html/**/*.html', 'data/*.yaml'])
-  .pipe($.plumber())
-  .pipe($.frontMatter().on('data', file => {
-    _.assign(file, file.frontMatter);
-  }))
-  .pipe(gulpsmith()
-    .use($$.metadata({
-      education: 'education.yaml',
-      experience: 'experience.yaml',
-      presentations: 'presentations.yaml'
-    }))
-    .use($$.permalinks(':title'))
-    .use($$.layouts({
-      engine: 'ejs',
-      directory: 'tpl'
-    }))
-    .use($$.inPlace({
-      engine: 'ejs'
-    }))
-  )
-  .pipe($.inline({
-    base: 'dist'
-  }))
+gulp.task('html:clean', () => del(['dist/**/*.html']));
+
+gulp.task('html:build', () => gulp.src('html/**/*.html')
+  .pipe($.data(() => yml('./data')))
+  .pipe($.nunjucks.compile())
   .pipe($.htmlmin({
     collapseWhitespace: true
   }))
@@ -57,33 +38,34 @@ gulp.task('html', ['html:clean', 'css'], () => gulp.src(['html/**/*.html', 'data
   }))
 );
 
-gulp.task('html:clean', () => del(['dist/**/*.html']));
+gulp.task('html', gulp.series('html:clean', 'html:build'));
 
-gulp.task('build', [
+gulp.task('build', gulp.series(
   'css',
   'html'
-]);
+));
 
-gulp.task('default', ['build']);
+gulp.task('default', gulp.series('build'));
 
-gulp.task('watch', ['build'], () => {
+gulp.task('watch', () => {
   $.livereload.listen();
 
-  gulp.watch('css/**/*.css', ['css']);
-  gulp.watch('{html,tpl}/**/*.html', ['html']);
-  gulp.watch('data/*.yaml', ['html']);
+  gulp.watch('css/**/*.css', gulp.series('css'));
+  gulp.watch('html/**/*.html', gulp.series('html'));
 });
 
-gulp.task('serve', ['watch'], () => gulp.src('dist')
-  .pipe($.plumber())
+gulp.task('serve:web', () => gulp.src('dist')
   .pipe($.webserver({
     open: true,
     livereload: true
   }))
 );
 
-gulp.task('deploy', ['deploy:clean', 'build'], () => gulp.src('dist/**')
-  .pipe($.plumber())
+gulp.task('serve', gulp.series('build', gulp.parallel('watch', 'serve:web')));
+
+gulp.task('deploy:clean', () => del(['.tmp']));
+
+gulp.task('deploy:push', () => gulp.src('dist/**')
   .pipe($.ghPages({
     branch: 'master',
     cacheDir: '.tmp',
@@ -94,4 +76,4 @@ gulp.task('deploy', ['deploy:clean', 'build'], () => gulp.src('dist/**')
   }))
 );
 
-gulp.task('deploy:clean', () => del(['.tmp']));
+gulp.task('deploy', gulp.series('build', 'deploy:clean', 'deploy:push'));

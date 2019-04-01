@@ -1,104 +1,122 @@
----
-layout: layout.html
----
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
 
-<header>
-  <picture>
-    <source
-      media="(max-width: 539px)"
-      srcset="
-        https://avatars0.githubusercontent.com/u/1174718?v=4&s=120,
-        https://avatars0.githubusercontent.com/u/1174718?v=4&s=240 2x
-      ">
-    <source
-      media="(min-width: 540px)"
-      srcset="
-        https://avatars0.githubusercontent.com/u/1174718?v=4&s=200,
-        https://avatars0.githubusercontent.com/u/1174718?v=4&s=400 2x
-      ">
-    <img class="center avatar" alt="Kasper's Avatar" src="https://github.com/kasperisager.png">
-  <picture>
+    <title>@kasperisager</title>
 
-  <h1 class="text-center">Hi! My name is Kasper</h1>
-  <h2 class="text-center text-muted">...and I build things for the internet</h2>
+    <link rel="icon" href="https://github.com/kasperisager.png">
 
-  <ul class="inline text-center">
-    <li><a href="mailto:kasperisager@gmail.com"><strong>Email</strong></a></li>
-    <li><a href="https://github.com/kasperisager"><strong>GitHub</strong></a></li>
-  </ul>
-</header>
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400">
 
-<main>
-  <section aria-labelledby="experience">
-    <h2 id="experience">Experience</h2>
+    <link rel="stylesheet" href="/css/site.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <picture>
+          <source
+            media="(max-width: 539px)"
+            srcset="
+              https://avatars0.githubusercontent.com/u/1174718?v=4&s=120,
+              https://avatars0.githubusercontent.com/u/1174718?v=4&s=240 2x
+            ">
+          <source
+            media="(min-width: 540px)"
+            srcset="
+              https://avatars0.githubusercontent.com/u/1174718?v=4&s=200,
+              https://avatars0.githubusercontent.com/u/1174718?v=4&s=400 2x
+            ">
+          <img class="center avatar" alt="Kasper's Avatar" src="https://github.com/kasperisager.png">
+        <picture>
 
-    <% experience.forEach(function (job, i) { %>
-      <article class="compact" aria-labelledby="experience-<%- i %>">
-        <p>
-          <span id="experience-<%- i %>">
-            <strong><%- job.position %></strong> @ <a href="<%- job.company.url %>"><%- job.company.name %></a>
-          </span>
-          <br><small class="text-muted"><%- job.date.start %> – <%- job.date.end %></small>
-        </p>
-        <p><%- job.description %></p>
-      </article>
-    <% }) %>
-  </section>
+        <h1 class="text-center">Hi! My name is Kasper</h1>
+        <h2 class="text-center text-muted">...and I build things for the internet</h2>
 
-  <section aria-labelledby="presentations">
-    <h2 id="presentations">Presentations</h2>
+        <ul class="inline text-center">
+          <li><a href="mailto:kasperisager@gmail.com"><strong>Email</strong></a></li>
+          <li><a href="https://github.com/kasperisager"><strong>GitHub</strong></a></li>
+        </ul>
+      </header>
 
-    <% presentations.forEach(function (presentation, i) { %>
-      <article class="compact" aria-labelledby="presentation-<%- i %>">
-        <p>
-          <span id="presentation-<%- i %>">
-            <strong><a href="<%- presentation.url %>"><%- presentation.title %></a></strong>
-          </span>
-          @ <a href="<%- presentation.place.url %>"><%- presentation.place.name %></a>
+      <main>
+        <section aria-labelledby="experience">
+          <h2 id="experience">Experience</h2>
 
-          <br><small class="text-muted"><%- presentation.date %></small>
-        </p>
-        <p><%- presentation.tagline %></p>
-      </article>
-    <% }) %>
-  </section>
+          {% for job in experience %}
+            <article class="compact" aria-labelledby="experience-{{ loop.index }}">
+              <p>
+                <span id="experience-{{ loop.index }}">
+                  <strong>{{ job.position }}</strong> @ <a href="{{ job.company.url }}">{{ job.company.name }}</a>
+                </span>
+                <br><small class="text-muted">{{ job.date.start }} – {{ job.date.end }}</small>
+              </p>
+              <p>{{ job.description | safe }}</p>
+            </article>
+          {% endfor %}
+        </section>
 
-  <section aria-labelledby="education">
-    <h2 id="education">Education</h2>
+        <section aria-labelledby="presentations">
+          <h2 id="presentations">Presentations</h2>
 
-    <% education.forEach(function (course, i) { %>
-      <article class="compact" aria-labelledby="education-<%- i %>">
-        <p>
-          <span id="education-<%- i %>">
-            <strong><%- course.degree %></strong> @ <a href="<%- course.school.url %>"><%- course.school.name %></a>
-          </span>
-          <br><small class="text-muted"><%- course.date.start %> - <%- course.date.end %></small>
-        </p>
-        <p><%- course.description %></p>
+          {% for presentation in presentations %}
+            <article class="compact" aria-labelledby="presentation-{{ loop.index }}">
+              <p>
+                <span id="presentation-{{ loop.index }}">
+                  <strong><a href="{{ presentation.url }}">{{ presentation.title }}</a></strong>
+                </span>
+                @ <a href="{{ presentation.place.url }}">{{ presentation.place.name }}</a>
 
-        <% if (course.courses) { %>
-          <section aria-labelledby="courses">
-            <h3 id="courses">Courses</h3>
+                <br><small class="text-muted">{{ presentation.date }}</small>
+              </p>
+              <p>{{ presentation.tagline | safe }}</p>
+            </article>
+          {% endfor %}
+        </section>
 
-            <ul class="card-list list-unstyled small">
-              <% course.courses.forEach(function (course) { %>
-                <li class="card">
-                  <span class="text-muted pull-right"><%- course.ects %> ECTS</span>
-                  <strong><%- course.title %></strong>
-                  <% if (course.project) { %>
-                    &middot; <a href="<%- course.project %>" title="Project link for <%- course.title %>">Project link</a>
-                  <% } %>
-                </li>
-              <% }) %>
-            </ul>
-          </section>
-        <% } %>
-      </article>
-    <% }) %>
-  </section>
-</main>
+        <section aria-labelledby="education">
+          <h2 id="education">Education</h2>
 
-<footer>
-  <hr>
-  <p class="text-center text-muted small">Licensed under the terms of the MIT License</p>
-</footer>
+          {% for course in education %}
+            <article class="compact" aria-labelledby="education-{{ loop.index }}">
+              <p>
+                <span id="education-{{ loop.index }}">
+                  <strong>{{ course.degree }}</strong> @ <a href="{{ course.school.url }}">{{ course.school.name }}</a>
+                </span>
+                <br><small class="text-muted">{{ course.date.start }} - {{ course.date.end }}</small>
+              </p>
+              <p>{{ course.description | safe }}</p>
+
+              {#
+              {% if course.courses %}
+                <section aria-labelledby="courses">
+                  <h3 id="courses">Courses</h3>
+
+                  <ul class="card-list list-unstyled small">
+                    {% for course in course.courses %}
+                      <li class="card">
+                        <span class="text-muted pull-right">{{ course.ects }} ECTS</span>
+                        <strong>{{ course.title }}</strong>
+                        {% if course.project %}
+                          &middot; <a href="{{ course.project }}" title="Project link for {{ course.title }}">Project link</a>
+                        {% endif %}
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </section>
+              {% endif %}
+              #}
+            </article>
+          {% endfor %}
+        </section>
+      </main>
+
+      <footer>
+        <hr>
+        <p class="text-center text-muted small">Licensed under the terms of the MIT License</p>
+      </footer>
+    </div>
+  </body>
+</html>

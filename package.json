@@ -3,42 +3,27 @@
   "private": true,
   "scripts": {
     "start": "gulp serve",
-    "test": "xo",
     "deploy": "gulp deploy"
   },
-  "xo": {
-    "space": true,
-    "esnext": true
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   },
   "devDependencies": {
-    "del": "^2.2.0",
-    "ejs": "^2.4.1",
-    "gulp": "^3.8.11",
+    "del": "^4.0.0",
+    "gulp": "^4.0.0",
     "gulp-cssnano": "^2.1.0",
-    "gulp-front-matter": "^1.2.2",
+    "gulp-data": "^1.3.1",
     "gulp-gh-pages": "^0.5.1",
-    "gulp-htmlmin": "^1.3.0",
-    "gulp-inline": "^0.1.0",
-    "gulp-livereload": "^3.8.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-livereload": "^4.0.1",
     "gulp-load-plugins": "^1.2.0",
-    "gulp-plumber": "^1.0.0",
-    "gulp-postcss": "^6.0.1",
-    "gulp-size": "^2.0.0",
+    "gulp-nunjucks": "^4.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-size": "^3.0.0",
     "gulp-webserver": "^0.9.0",
-    "gulpsmith": "^0.5.3",
-    "load-metalsmith-plugins": "^0.1.1",
-    "lodash": "^3.7.0",
-    "metalsmith": "^2.1.0",
-    "metalsmith-in-place": "^1.3.3",
-    "metalsmith-layouts": "^1.4.4",
-    "metalsmith-metadata": "0.0.2",
-    "metalsmith-permalinks": "^0.4.1",
-    "postcss-cssnext": "^2.4.0",
-    "postcss-import": "^8.0.2",
-    "postcss-url": "^5.1.0",
-    "xo": "^0.10.0"
-  },
-  "dependencies": {
-    "normalize.css": "^3.0.3"
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^12.0.1",
+    "postcss-url": "^8.0.0",
+    "require-yml": "^1.3.2"
   }
 }
