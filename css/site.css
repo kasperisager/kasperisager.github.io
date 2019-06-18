@@ -22,16 +22,12 @@
 
   /* Headings */
   --heading-font-weight: 300;
-
-  /* Avatar */
-  --avatar-size-base: 120px;
-  --avatar-size-tablet: 200px;
 }
 
 /* Media quries
  * -------------------------------------------------------------------------- */
 
-@custom-media --tablet (min-width: 540px);
+@custom-media --tablet (min-width: 34rem);
 
 /* Styles
  * -------------------------------------------------------------------------- */
@@ -43,17 +39,20 @@
 }
 
 html {
+  box-sizing: border-box;
+}
+
+body {
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-base);
   line-height: var(--line-height-base);
   color: var(--text-color);
   text-shadow: 0 1px #fff;
-  box-sizing: border-box;
 }
 
 @media (--tablet) {
-  html {
+  body {
     font-size: var(--font-size-tablet);
   }
 }
@@ -134,10 +133,6 @@ header ul {
   margin-top: 2rem;
 }
 
-header img {
-  border-radius: 4px;
-}
-
 footer {
   margin-top: 2.5rem;
   margin-bottom: 1.6rem;
@@ -170,9 +165,9 @@ article + article {
 }
 
 .container {
-  max-width: 740px;
-  padding-right: 20px;
-  padding-left: 20px;
+  max-width: 46rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -208,16 +203,4 @@ article + article {
 
 .card + .card {
   margin-top: -1px;
-}
-
-.avatar {
-  width: var(--avatar-size-base);
-  height: var(--avatar-size-base);
-}
-
-@media (--tablet) {
-  .avatar {
-    width: var(--avatar-size-tablet);
-    height: var(--avatar-size-tablet);
-  }
 }
