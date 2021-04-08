@@ -5,7 +5,11 @@
   date:
     start: "February 2018"
     end: "Current"
-  description: "Product owner of the Accessibility product offered by Siteimprove. I lead the research and development of our accessibility conformance testing engine, <a href=\"https://github.com/siteimprove/alfa\">Alfa</a>, and its surrounding ecosystem."
+  description: |
+    Product owner of the Accessibility product offered by Siteimprove. I lead
+    the research and development of our accessibility conformance testing engine,
+    <a href="https://github.com/siteimprove/alfa">Alfa</a>, and its surrounding
+    ecosystem.
 
 - position: "Developer"
   company:
@@ -14,7 +18,11 @@
   date:
     start: "November 2015"
     end: "January 2018"
-  description: "Software developer on the Accessibility product offered by Siteimprove. I develop tools for performing reliable accessibility conformance testing of the WCAG. I also had a brief stint with our Core team developing the Siteimprove UI component library."
+  description: |
+    Software developer on the Accessibility product offered by Siteimprove. I
+    develop tools for performing reliable accessibility conformance testing of
+    the WCAG. I also had a brief stint with our Core team developing the
+    Siteimprove UI component library.
 
 - position: "Consultant"
   company:
@@ -23,7 +31,11 @@
   date:
     start: "September 2014"
     end: "Current"
-  description: "Funktionél is my software development consultancy offering services primarily in web development. We develop functional solutions for individuals as well as small to medium sized businesses. I primarily use Funktionél as a means of supporting my work in open source."
+  description: |
+    Funktionél is my software development consultancy offering services primarily
+    in web development. We develop functional solutions for individuals as well
+    as small to medium sized businesses. I primarily use Funktionél as a means of
+    supporting my work in open source.
 
 - position: "Developer"
   company:
@@ -32,4 +44,8 @@
   date:
     start: "October 2012"
     end: "July 2014"
-  description: "User Interface design, prototyping and implementation. I help bring Vanilla Forums to the next level through enjoyable and highly performant front-ends. My work includes themes for clients such as The Elder Scrolls Online, AgileBits, Rumble Entertainment, and many more."
+  description: |
+    User Interface design, prototyping and implementation. I help bring Vanilla
+    Forums to the next level through enjoyable and highly performant front-ends.
+    My work includes themes for clients such as The Elder Scrolls Online,
+    AgileBits, Rumble Entertainment, and many more.

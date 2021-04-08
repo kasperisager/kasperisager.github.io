@@ -1,24 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
 
     <title>@kasperisager</title>
 
-    <link rel="icon" href="https://github.com/kasperisager.png">
+    <link rel="icon" href="https://github.com/kasperisager.png" />
 
-    <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="/css/site.css" />
   </head>
   <body>
     <div class="container">
       <header>
-        <h1 class="text-center">Hi! My name is Kasper</h1>
-        <h2 class="text-center text-muted">...and I build things for the internet</h2>
+        <h1>Hi! My name is Kasper</h1>
+        <h2 class="text-muted">...and I build things for the internet</h2>
 
-        <ul class="inline text-center">
-          <li><a href="mailto:kasperisager@gmail.com"><strong>Email</strong></a></li>
-          <li><a href="https://github.com/kasperisager"><strong>GitHub</strong></a></li>
+        <ul class="inline">
+          <li>
+            <a href="mailto:kasperisager@hey.com"><strong>Email</strong></a>
+          </li>
+          <li>
+            <a href="https://github.com/kasperisager"
+              ><strong>GitHub</strong></a
+            >
+          </li>
         </ul>
       </header>
 
@@ -27,15 +33,21 @@
           <h2 id="experience">Experience</h2>
 
           {% for job in experience %}
-            <article class="compact" aria-labelledby="experience-{{ loop.index }}">
-              <p>
-                <span id="experience-{{ loop.index }}">
-                  <strong>{{ job.position }}</strong> @ <a href="{{ job.company.url }}">{{ job.company.name }}</a>
-                </span>
-                <br><small class="text-muted">{{ job.date.start }} – {{ job.date.end }}</small>
-              </p>
-              <p>{{ job.description | safe }}</p>
-            </article>
+          <article
+            class="compact"
+            aria-labelledby="experience-{{ loop.index }}"
+          >
+            <p>
+              <span id="experience-{{ loop.index }}">
+                <strong>{{ job.position }}</strong> @
+                <a href="{{ job.company.url }}">{{ job.company.name }}</a>
+              </span>
+              <br /><small class="text-muted"
+                >{{ job.date.start }} – {{ job.date.end }}</small
+              >
+            </p>
+            <p>{{ job.description | safe }}</p>
+          </article>
           {% endfor %}
         </section>
 
@@ -43,17 +55,27 @@
           <h2 id="presentations">Presentations</h2>
 
           {% for presentation in presentations %}
-            <article class="compact" aria-labelledby="presentation-{{ loop.index }}">
-              <p>
-                <span id="presentation-{{ loop.index }}">
-                  <strong><a href="{{ presentation.url }}">{{ presentation.title }}</a></strong>
-                </span>
-                @ <a href="{{ presentation.place.url }}">{{ presentation.place.name }}</a>
+          <article
+            class="compact"
+            aria-labelledby="presentation-{{ loop.index }}"
+          >
+            <p>
+              <span id="presentation-{{ loop.index }}">
+                <strong
+                  ><a href="{{ presentation.url }}"
+                    >{{ presentation.title }}</a
+                  ></strong
+                >
+              </span>
+              @
+              <a href="{{ presentation.place.url }}"
+                >{{ presentation.place.name }}</a
+              >
 
-                <br><small class="text-muted">{{ presentation.date }}</small>
-              </p>
-              <p>{{ presentation.tagline | safe }}</p>
-            </article>
+              <br /><small class="text-muted">{{ presentation.date }}</small>
+            </p>
+            <p>{{ presentation.tagline | safe }}</p>
+          </article>
           {% endfor %}
         </section>
 
@@ -61,42 +83,51 @@
           <h2 id="education">Education</h2>
 
           {% for course in education %}
-            <article class="compact" aria-labelledby="education-{{ loop.index }}">
-              <p>
-                <span id="education-{{ loop.index }}">
-                  <strong>{{ course.degree }}</strong> @ <a href="{{ course.school.url }}">{{ course.school.name }}</a>
-                </span>
-                <br><small class="text-muted">{{ course.date.start }} - {{ course.date.end }}</small>
-              </p>
-              <p>{{ course.description | safe }}</p>
+          <article class="compact" aria-labelledby="education-{{ loop.index }}">
+            <p>
+              <span id="education-{{ loop.index }}">
+                <strong>{{ course.degree }}</strong> @
+                <a href="{{ course.school.url }}">{{ course.school.name }}</a>
+              </span>
+              <br /><small class="text-muted"
+                >{{ course.date.start }} - {{ course.date.end }}</small
+              >
+            </p>
+            <p>{{ course.description | safe }}</p>
 
-              {#
-              {% if course.courses %}
-                <section aria-labelledby="courses">
-                  <h3 id="courses">Courses</h3>
+            {# {% if course.courses %}
+            <section aria-labelledby="courses">
+              <h3 id="courses">Courses</h3>
 
-                  <ul class="card-list list-unstyled small">
-                    {% for course in course.courses %}
-                      <li class="card">
-                        <span class="text-muted pull-right">{{ course.ects }} ECTS</span>
-                        <strong>{{ course.title }}</strong>
-                        {% if course.project %}
-                          &middot; <a href="{{ course.project }}" title="Project link for {{ course.title }}">Project link</a>
-                        {% endif %}
-                      </li>
-                    {% endfor %}
-                  </ul>
-                </section>
-              {% endif %}
-              #}
-            </article>
+              <ul class="card-list list-unstyled small">
+                {% for course in course.courses %}
+                <li class="card">
+                  <span class="text-muted pull-right"
+                    >{{ course.ects }} ECTS</span
+                  >
+                  <strong>{{ course.title }}</strong>
+                  {% if course.project %} &middot;
+                  <a
+                    href="{{ course.project }}"
+                    title="Project link for {{ course.title }}"
+                    >Project link</a
+                  >
+                  {% endif %}
+                </li>
+                {% endfor %}
+              </ul>
+            </section>
+            {% endif %} #}
+          </article>
           {% endfor %}
         </section>
       </main>
 
       <footer>
-        <hr>
-        <p class="text-center text-muted small">Licensed under the terms of the MIT License</p>
+        <hr />
+        <p class="text-muted small">
+          Licensed under the terms of the MIT License
+        </p>
       </footer>
     </div>
   </body>

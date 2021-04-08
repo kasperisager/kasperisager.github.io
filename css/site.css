@@ -10,10 +10,10 @@
   /* Colors */
   --text-color: #333;
   --link-color: #0067e6;
-  --muted-color: #767676;
+  --muted-color: #444;
 
   /* Typography */
-  --font-family-base: Helvetica, Arial, sans-serif;
+  --font-family-base: Georgia, serif;
   --font-size-base: 1rem;
   --font-size-tablet: 1.2rem;
   --font-size-small: 80%;
@@ -117,8 +117,11 @@ ol.inline,
 ul.inline li,
 ol.inline li {
   display: inline;
-  margin-right: .5rem;
-  margin-left: .5rem;
+}
+
+ul.inline li + li,
+ol.inline li + li {
+  margin-left: 1rem;
 }
 
 header {
@@ -166,10 +169,8 @@ article + article {
 
 .container {
   max-width: 46rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  margin-right: auto;
-  margin-left: auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 .center {

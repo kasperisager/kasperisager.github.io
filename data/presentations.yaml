@@ -1,5 +1,10 @@
 - title: "Developing Accessible Pattern Libraries"
-  tagline: "During the development of Siteimprove UI, our internal library of reusable UI components in use at Siteimprove, we identified some common pieces of functionality and design patterns that are now used throughout the library. This presentation gives a short introduction to and walkthrough of some of the things we found most useful."
+  tagline: |
+    During the development of Siteimprove UI, our internal library of reusable
+    UI components in use at Siteimprove, we identified some common pieces of
+    functionality and design patterns that are now used throughout the library.
+    This presentation gives a short introduction to and walkthrough of some of
+    the things we found most useful.
   url: "https://kasperisager.github.io/presentation-accessible-pattern-library"
   date: "March 2018"
   place:
@@ -7,7 +12,12 @@
     url: "https://www.csun.edu/cod/conference/"
 
 - title: "Coding for Accessibility"
-  tagline: "While it might come off as difficult, and certainly sometimes can be, coding for accessibility essentially boils down to two rather simple things: Mindset and semantics. This presentation gives a brief introduction to these two concepts and provides some practical advice on turning inaccessible UI accessible."
+  tagline: |
+    While it might come off as difficult, and certainly sometimes can be, coding
+    for accessibility essentially boils down to two rather simple things: Mindset
+    and semantics. This presentation gives a brief introduction to these two
+    concepts and provides some practical advice on turning inaccessible UI
+    accessible.
   url: "https://kasperisager.github.io/presentation-coding-for-accessibility"
   date: "November 2017"
   place:
@@ -15,7 +25,12 @@
     url: "https://www.codher.com"
 
 - title: "An introduction to Terraform"
-  tagline: "Terraform makes it easy to configure and provision cloud resources across a large number of providers and brings with it both collaborative ascepts, reproducibility, and predictability. This presentation gives a short introduction to Terraform, its benefits, and why you should most likely be using it."
+  tagline: |
+    Terraform makes it easy to configure and provision cloud resources across a
+    large number of providers and brings with it both collaborative ascepts,
+    reproducibility, and predictability. This presentation gives a short
+    introduction to Terraform, its benefits, and why you should most likely be
+    using it.
   url: "https://kasperisager.github.io/presentation-terraform"
   date: "February 2017"
   place:
@@ -23,7 +38,12 @@
     url: "https://siteimprove.com"
 
 - title: "Leveling up CSS"
-  tagline: "Writing, scaling, and maintaining plain CSS codebases used to be a pain and pre-processors came along to save the day. Things are however moving fast and CSS is catching up with the pre-processors and is becoming increasingly expressive. This presentation introduces some of the new specifications in CSS and makes an argument against the pre-processors of today."
+  tagline: |
+    Writing, scaling, and maintaining plain CSS codebases used to be a pain and
+    pre-processors came along to save the day. Things are however moving fast and
+    CSS is catching up with the pre-processors and is becoming increasingly
+    expressive. This presentation introduces some of the new specifications in
+    CSS and makes an argument against the pre-processors of today.
   url: "https://kasperisager.github.io/presentation-postcss"
   date: "November 2016"
   place:
@@ -31,7 +51,12 @@
     url: "https://siteimprove.com"
 
 - title: "Workflows for the Modern Web"
-  tagline: "Writing JavaScript applications for the browser is often a chaotic and fragmented experience. With a vast selection of technology at our disposal, bringing it all together is often time consuming and prone to error. This presentation introduces many of the tools used in modern front-end development for improving the overall development experience."
+  tagline: |
+    Writing JavaScript applications for the browser is often a chaotic and
+    fragmented experience. With a vast selection of technology at our disposal,
+    bringing it all together is often time consuming and prone to error. This
+    presentation introduces many of the tools used in modern front-end
+    development for improving the overall development experience.
   url: "https://kasperisager.github.io/presentation-tooling"
   date: "May 2014"
   place:

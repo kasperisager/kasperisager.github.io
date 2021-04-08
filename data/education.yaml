@@ -5,7 +5,12 @@
   date:
     start: "2014"
     end: "2017"
-  description: "The three-year B.Sc. in Software Development teaches design and programming of software, but also communication, presentation and business. This combination of disciplines provides the qualifications for developing and designing IT solutions, as well as providing consultation for businesses and organisations on a given solution."
+  description: |
+    The three-year B.Sc. in Software Development teaches design and programming
+    of software, but also communication, presentation and business. This
+    combination of disciplines provides the qualifications for developing and
+    designing IT solutions, as well as providing consultation for businesses and
+    organisations on a given solution.
 
   courses:
     - title: Discrete Mathematics
